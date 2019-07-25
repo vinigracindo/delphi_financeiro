@@ -1,8 +1,8 @@
-program Financeiro;
+program Comercial;
 
 uses
   Vcl.Forms,
-  uFrmPrincipal in 'uFrmPrincipal.pas' {Form1};
+  uFrmPrincipal in 'View\uFrmPrincipal.pas' {Form1};
 
 {$R *.res}
 
