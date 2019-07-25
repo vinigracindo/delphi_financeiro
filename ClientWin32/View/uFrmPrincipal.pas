@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, System.ImageList, Vcl.ImgList,
   Vcl.PlatformDefaultStyleActnCtrls, System.Actions, Vcl.ActnList, Vcl.ActnMan,
-  Vcl.ToolWin, Vcl.ActnCtrls, Vcl.ActnMenus;
+  Vcl.ToolWin, Vcl.ActnCtrls, Vcl.ActnMenus, Vcl.Menus, Vcl.CustomizeDlg;
 
 type
   TFrmPrincipal = class(TForm)
@@ -29,6 +29,11 @@ type
     Ac_Utilitarios_Internet: TAction;
     Ac_Seguranca_Logoff: TAction;
     Ac_Seguranca_Perfil: TAction;
+    ATBPadrao: TActionToolBar;
+    PopupMenu1: TPopupMenu;
+    CustomizeDlg1: TCustomizeDlg;
+    Personalizar1: TMenuItem;
+    procedure Personalizar1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -41,5 +46,10 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TFrmPrincipal.Personalizar1Click(Sender: TObject);
+begin
+  CustomizeDlg1.Show;
+end;
 
 end.

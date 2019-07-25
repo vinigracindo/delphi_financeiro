@@ -36,7 +36,29 @@ object FrmPrincipal: TFrmPrincipal
     ExplicitWidth = 150
     ExplicitHeight = 29
   end
+  object ATBPadrao: TActionToolBar
+    Left = 0
+    Top = 25
+    Width = 676
+    Height = 26
+    ActionManager = AMAcoes
+    Caption = 'ATBPadrao'
+    Color = clMenuBar
+    ColorMap.DisabledFontColor = 7171437
+    ColorMap.HighlightColor = clWhite
+    ColorMap.BtnSelectedFont = clBlack
+    ColorMap.UnusedColor = clWhite
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    PopupMenu = PopupMenu1
+    Spacing = 0
+  end
   object AMAcoes: TActionManager
+    FileName = 'Menu.txt'
     ActionBars = <
       item
         Items = <
@@ -149,10 +171,30 @@ object FrmPrincipal: TFrmPrincipal
             Caption = '&Ajuda'
           end>
         ActionBar = ActionMainMenuBar1
+      end
+      item
+        Items.CaptionOptions = coNone
+        Items = <
+          item
+            Action = Ac_Cadastro_Clientes
+            Caption = '&Clientes'
+            ImageIndex = 3
+          end
+          item
+            Action = Ac_Seguranca_Perfil
+            Caption = '&Perfil'
+            ImageIndex = 14
+          end
+          item
+            Action = Ac_Vendas_PDV
+            Caption = 'P&DV'
+            ImageIndex = 15
+          end>
+        ActionBar = ATBPadrao
       end>
     Images = ILImages
-    Left = 536
-    Top = 48
+    Left = 616
+    Top = 40
     StyleName = 'Platform Default'
     object Ac_Cadastro_Clientes: TAction
       Category = 'Cadastro'
@@ -236,7 +278,7 @@ object FrmPrincipal: TFrmPrincipal
     end
   end
   object ILImages: TImageList
-    Left = 536
+    Left = 616
     Top = 96
     Bitmap = {
       494C010111001800040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
@@ -905,5 +947,19 @@ object FrmPrincipal: TFrmPrincipal
       8001C00380018003E007C00380018003E007C00380018003F81FC003E7E7E207
       F81FC003EFF7FE07FE7FFFFFFFFFFF8F00000000000000000000000000000000
       000000000000}
+  end
+  object PopupMenu1: TPopupMenu
+    Left = 616
+    Top = 152
+    object Personalizar1: TMenuItem
+      Caption = 'Personalizar'
+      OnClick = Personalizar1Click
+    end
+  end
+  object CustomizeDlg1: TCustomizeDlg
+    ActionManager = AMAcoes
+    StayOnTop = False
+    Left = 616
+    Top = 208
   end
 end
