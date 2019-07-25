@@ -2,9 +2,9 @@ object FrmPrincipal: TFrmPrincipal
   Left = 0
   Top = 0
   Caption = 'Sistema de Vendas'
-  ClientHeight = 442
-  ClientWidth = 676
-  Color = clBtnFace
+  ClientHeight = 507
+  ClientWidth = 766
+  Color = clWhite
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -16,46 +16,39 @@ object FrmPrincipal: TFrmPrincipal
   object ActionMainMenuBar1: TActionMainMenuBar
     Left = 0
     Top = 0
-    Width = 676
+    Width = 766
     Height = 25
     ActionManager = AMAcoes
     Caption = 'ActionMainMenuBar1'
-    Color = clMenuBar
-    ColorMap.DisabledFontColor = 7171437
-    ColorMap.HighlightColor = clWhite
-    ColorMap.BtnSelectedFont = clBlack
-    ColorMap.UnusedColor = clWhite
+    Color = clMoneyGreen
+    ColorMap = XPColorMap1
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -12
     Font.Name = 'Segoe UI'
     Font.Style = []
     Spacing = 0
-    ExplicitLeft = 272
-    ExplicitTop = 224
-    ExplicitWidth = 150
-    ExplicitHeight = 29
+    ExplicitWidth = 676
   end
   object ATBPadrao: TActionToolBar
     Left = 0
     Top = 25
-    Width = 676
+    Width = 766
     Height = 26
     ActionManager = AMAcoes
     Caption = 'ATBPadrao'
-    Color = clMenuBar
-    ColorMap.DisabledFontColor = 7171437
-    ColorMap.HighlightColor = clWhite
-    ColorMap.BtnSelectedFont = clBlack
-    ColorMap.UnusedColor = clWhite
+    Color = clMoneyGreen
+    ColorMap = XPColorMap1
     Font.Charset = DEFAULT_CHARSET
-    Font.Color = clBlack
+    Font.Color = clWindowText
     Font.Height = -11
     Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
     PopupMenu = PopupMenu1
     Spacing = 0
+    ExplicitLeft = 88
+    ExplicitTop = 89
   end
   object AMAcoes: TActionManager
     FileName = 'Menu.txt'
@@ -193,8 +186,8 @@ object FrmPrincipal: TFrmPrincipal
         ActionBar = ATBPadrao
       end>
     Images = ILImages
-    Left = 616
-    Top = 40
+    Left = 704
+    Top = 104
     StyleName = 'Platform Default'
     object Ac_Cadastro_Clientes: TAction
       Category = 'Cadastro'
@@ -278,8 +271,8 @@ object FrmPrincipal: TFrmPrincipal
     end
   end
   object ILImages: TImageList
-    Left = 616
-    Top = 96
+    Left = 704
+    Top = 160
     Bitmap = {
       494C010111001800040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000005000000001002000000000000050
@@ -949,8 +942,8 @@ object FrmPrincipal: TFrmPrincipal
       000000000000}
   end
   object PopupMenu1: TPopupMenu
-    Left = 616
-    Top = 152
+    Left = 704
+    Top = 216
     object Personalizar1: TMenuItem
       Caption = 'Personalizar'
       OnClick = Personalizar1Click
@@ -959,7 +952,15 @@ object FrmPrincipal: TFrmPrincipal
   object CustomizeDlg1: TCustomizeDlg
     ActionManager = AMAcoes
     StayOnTop = False
-    Left = 616
-    Top = 208
+    Left = 704
+    Top = 272
+  end
+  object XPColorMap1: TXPColorMap
+    Color = clMoneyGreen
+    HighlightColor = clWhite
+    BtnSelectedColor = clBtnFace
+    UnusedColor = clWhite
+    Left = 704
+    Top = 336
   end
 end
