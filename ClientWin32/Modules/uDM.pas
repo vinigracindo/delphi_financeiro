@@ -10,7 +10,7 @@ uses
 
 type
   TDataModule1 = class(TDataModule)
-    FDConnection1: TFDConnection;
+    DBAcesso: TFDConnection;
   private
     { Private declarations }
   public
